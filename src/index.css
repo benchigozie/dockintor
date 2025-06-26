@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+html {
+  font-size: 15px;
+  font-family: sans-serif;
+  color: var(--col0r-mygreen);
+  /*line-height: 1.5;*/
+}
+
+@theme {
+  --color-mylime: #d4ff00;
+  --color-mygreen: #09371F;
+  --color-myblack: #1f1d1d;
+  --color-mylight: #FBFBF3;
+}
