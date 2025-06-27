@@ -3,7 +3,7 @@ import Button from "./Button";
 function Footer() {
   return (
     <footer className="bg-mygreen py-28 px-3 md:px-36 text-mylight">
-      <div className="flex flex-col md:flex-row justify-between max-w-[1300px] gap-8">
+      <div className="flex flex-col md:flex-row justify-between max-w-[1300px] md:gap-16 lg:gap-8">
         <div className="flex flex-col gap-22">
           <div><p>Dockintor</p></div>
           <div className="flex flex-col gap-10">

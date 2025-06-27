@@ -13,8 +13,8 @@ function Header() {
     };
 
     return (
-        <div className='fixed w-full shadow-md'>
-            <div className='py-2 flex justify-center text-mygreen font-semibold bg-mylime'><p>Clean hands save lives - Wash your hands!</p></div>
+        <div className='fixed w-full shadow-md z-20'>
+            <div className='py-2 flex justify-center text-mygreen font-semibold bg-mylime text-center'><p>Clean hands save lives - Wash your hands!</p></div>
             <div className='bg-mylight flex justify-center'>
                 <div className='max-w-[1300px] flex justify-between py-4 px-2 w-full'>
                     <div className='flex items-center'>
