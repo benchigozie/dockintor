@@ -66,7 +66,7 @@ function UserSignup() {
                             <ErrorMessage name="confirmPassword" component="div" className="text-orange-600 text-sm" />
                         </div>
                         <div>
-                            <label htmlFor='language' className="font-semibold">Your Preferred Language</label>
+                            <label className="font-semibold">Your Preferred Language</label>
                             <div className='flex gap-4'>
                                 <div>
                                     <label>
