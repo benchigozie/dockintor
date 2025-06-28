@@ -27,7 +27,7 @@ function Header() {
                             <ul className='flex justify-center gap-5 font-light'>
                                 <li><a href="/#our-doctors">Our Doctors</a></li>
                                 <li><a href="/#how-it-works">How It Works</a></li>
-                                <li><Link to="/book">Book a session</Link></li>
+                                <li><Link to="/login">Book a session</Link></li>
                             </ul>
                         </nav>
                         <Link className='flex items-center gap-2 cursor-pointer' to="/get-started">
