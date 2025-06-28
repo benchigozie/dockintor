@@ -54,7 +54,7 @@ function Header() {
                       <a className="hover:text-light-wood block w-full h-full py-4" href='/#how-it-works'>How It works</a>
                     </li>
                     <li className='hover:cursor-pointer hover:bg-gray-200 w-full h-full text-center py-4 ' onClick={toggleHamMenu}>
-                    <Link to="/book" className='w-full'>Book a session</Link>
+                    <Link to="/login" className='w-full'>Book a session</Link>
                     </li>
                   </ul>
                   <Button btnText="Plans and Pricing" className="bg-mygreen text-mylight rounded-full hover:bg-mygreen/80 relative -top-16" />
