@@ -4,8 +4,16 @@ import MainLayout from './layouts/mainLayout';
 import GetStarted from './pages/GetStarted';
 import UserSignup from './pages/UserSignup';
 import DoctorSignup from './pages/DoctorSignup';
+import Login from './pages/Login';
+import Dashboard from './pages/Dashboard';
+import { useAuth } from './context/AuthContext';
+import BookAConsultation from './pages/BookAConsultation';
+
 
 export default function App() {
+
+  const { userToken } = useAuth();
+
   return (
     <Router>
       <Routes>
@@ -14,6 +22,11 @@ export default function App() {
           <Route path="/get-started" element={<GetStarted />} />
           <Route path="/user-signup" element={<UserSignup />} />
           <Route path="/doctor-signup" element={<DoctorSignup />} />
+          <Route path="/login" element={<Login />} />
+        </Route> 
+        <Route element={<MainLayout />}>
+          <Route path="/dashboard" element={ userToken ? <Dashboard />: null} />
+          <Route path="/book" element={userToken ? <BookAConsultation />: null} />
         </Route>
       </Routes>
     </Router>

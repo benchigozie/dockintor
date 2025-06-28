@@ -36,11 +36,11 @@ function Testimonials() {
                 {reviews.map((review, i) => (
                     <div 
                     key={review.id}
-                    className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-opacity duration-800 max-w-[700px] mx-auto bg-mylight ${
+                    className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-opacity duration-800 w-full px-4 max-w-[700px] mx-auto bg-mylight ${
                       i === currentReview ? "opacity-100" : "opacity-0 pointer-events-none"
                     }`}>
                         <div className='flex flex-col gap-12 mx-auto py-6 md:py-18 px-8 md:px-14 lg:px-24 text-center'>
-                            <h2 className='text-3xl font-bold text-center pt-10'>Patient Stories</h2>
+                            <h2 className='text-4xl font-bold text-center pt-10 font-Rozha'>Patient Stories</h2>
                             <p className='text-xl font-light'>{review.review}</p>
                         </div>
                         <div className='flex justify-center gap-3 mb-4'>

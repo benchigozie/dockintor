@@ -6,9 +6,9 @@ import firstAidIcon from '../assets/images/firstaid.png';
 function HowItWorks() {
     return (
         <section>
-            <div className='max-w-[1300px] mx-auto py-10 flex flex-col gap-10'>
+            <div className='max-w-[1300px] mx-auto py-10 flex flex-col gap-10' id='how-it-works'>
                 <div className='flex flex-col gap-10 text-center px-8'>
-                    <h2 className='text-3xl font-bold'>How It Works</h2>
+                    <h2 className='text-5xl font-bold font-Rozha'>How It Works</h2>
                     <p className='max-w-[500px] mx-auto font-light'>At Dockintor.com, we make getting reliable health information and referrals easy. Just follow these simple steps:</p>
                 </div>
                 <div className='grid grid-cols-1 md:grid-cols-[2fr_3fr] border-1 border-mygreen'>

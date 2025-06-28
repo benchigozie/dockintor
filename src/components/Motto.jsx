@@ -7,7 +7,7 @@ function Motto() {
     return (
         <section>
             <div className='max-w-[1330px] mx-auto text-center py-18 flex flex-col gap-18'>
-                <h3 className='text-3xl font-bold'>Reliable. Responsive. Compassionate.</h3>
+                <h3 className='text-4xl font-bold font-Rozha'>Reliable. Responsive. Compassionate.</h3>
                 <div className='grid grid-cols-4 gap-2 place-items-center w-full'>
                     <img src={stethoscopeIcon} alt="" />
                     <img src={shellIcon} alt="" />

@@ -1,9 +1,10 @@
 @import "tailwindcss";
 
 html {
-  font-size: 15px;
-  font-family: sans-serif;
+  font-size: 16px;
+  font-family:  var(--font-Manrope), sans-serif;
   color: var(--color-mygreen);
+  scroll-behavior: smooth;
   /*line-height: 1.5;*/
 }
 
@@ -13,4 +14,31 @@ html {
   --color-myblack: #1f1d1d;
   --color-mylight: #FBFBF3;
   --color-mylighty: #f2eddb;
+
+  --font-Rozha: 'Rozha';
+  --font-Manrope: 'Manrope';
+}
+
+@font-face {
+  font-family: Rozha;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../src/assets/fonts/rozha/RozhaOne-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: Manrope;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../src/assets/fonts/manrope/Manrope-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: Manrope;
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("../src/assets/fonts/manrope/Manrope-Light.woff2") format("woff2");
 }
