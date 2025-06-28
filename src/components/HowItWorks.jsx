@@ -2,6 +2,7 @@ import React from 'react';
 import chatIcon from '../assets/images/chat.png';
 import referralIcon from '../assets/images/referral.png';
 import firstAidIcon from '../assets/images/firstaid.png';
+import bomberImage from '../assets/images/bomb.png'
 
 function HowItWorks() {
     return (
@@ -13,9 +14,9 @@ function HowItWorks() {
                 </div>
                 <div className='grid grid-cols-1 md:grid-cols-[2fr_3fr] border-1 border-mygreen'>
                     <div className='w-full bg-amber-800'>
-                        <img src="" alt="" className='w-full bg-red-800'/>
+                        <img src={bomberImage} alt="" className='w-full bg-red-800 object-cover h-full'/>
                     </div>
-                    <div className='py-16 flex flex-col px-16 gap-12 font-light'>
+                    <div className='py-16 flex flex-col px-5 md:px-16 gap-12 font-light'>
                         <div className='grid grid-cols-[1fr_10fr] gap-6'>
                             <img src={chatIcon} alt="" className='w-14 h-auto'/>
                             <div>

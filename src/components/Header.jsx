@@ -47,13 +47,13 @@ function Header() {
                   className={`absolute top-full left-0 w-full h-screen bg-my-white md:hidden flex flex-col items-center justify-center gap-8  bg-mylight`
                   }>
                   <ul className='flex flex-col text-lg w-full items-center relative -top-16 font-light'>
-                    <li className='hover:cursor-pointer hover:bg-gray-200 w-full h-full text-center'>
+                    <li className='hover:cursor-pointer hover:bg-gray-200 w-full h-full text-center' onClick={toggleHamMenu}>
                       <a className="hover:text-light-wood block w-full h-full py-4" href="/#our-doctors">Our Doctors</a>
                     </li>
-                    <li className='hover:cursor-pointer hover:bg-gray-200 w-full h-full text-center'>
+                    <li className='hover:cursor-pointer hover:bg-gray-200 w-full h-full text-center' onClick={toggleHamMenu}>
                       <a className="hover:text-light-wood block w-full h-full py-4" href='/#how-it-works'>How It works</a>
                     </li>
-                    <li className='hover:cursor-pointer hover:bg-gray-200 w-full h-full text-center py-4 '>
+                    <li className='hover:cursor-pointer hover:bg-gray-200 w-full h-full text-center py-4 ' onClick={toggleHamMenu}>
                     <Link to="/book" className='w-full'>Book a session</Link>
                     </li>
                   </ul>

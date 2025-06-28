@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Modal from '../components/Modal';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import doctor5Image from '../assets/images/doctor5.jpg'
 
 const SignupSchema = Yup.object({
     fullName: Yup.string().min(2, 'Too short').max(50, 'Too long').required('Required'),
@@ -57,9 +58,9 @@ function UserSignup() {
         <div className="w-full bg-mylight py-10">
             <div className='max-w-[900px] flex flex-col mx-auto shadow-lg p-4 bg-white'>
                 <h1 className="text-2xl font-bold text-center mb-6">Sign up as a User</h1>
-                <div className='grid grid-cols-1 md:grid-cols-2 gap-4 max-w-[900px] p-4 mx-auto'>
+                <div className='grid grid-cols-1 md:grid-cols-2 gap-4 max-w-[900px] p-4 mx-auto place-items-center'>
                     <div>
-                        <img src="" alt="" className='bg-amber-700' />
+                        <img src={doctor5Image} alt="" className='bg-mygreen' />
                     </div>
                     <Formik initialValues={initialValues} validationSchema={SignupSchema} onSubmit={registerUser}>
                         {({ isSubmitting }) => (

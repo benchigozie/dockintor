@@ -8,6 +8,7 @@ import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
 import { useAuth } from './context/AuthContext';
 import BookAConsultation from './pages/BookAConsultation';
+import ScrollToTop from './components/scrollToTop';
 
 
 export default function App() {
@@ -16,6 +17,7 @@ export default function App() {
 
   return (
     <Router>
+      <ScrollToTop />
       <Routes>
         <Route element={<MainLayout />}>
           <Route path="/" element={<Home />} />

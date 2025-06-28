@@ -5,6 +5,7 @@ import Modal from '../components/Modal';
 import Button from '../components/Button';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import doctor6Image from '../assets/images/doctor6.jpg'
 
 const SignupSchema = Yup.object({
     fullName: Yup.string().min(2, 'Too short').max(50, 'Too long').required('Please enter your full name'),
@@ -88,9 +89,9 @@ function DoctorSignup() {
         <div className="w-full bg-mylight py-10">
             <div className='max-w-[900px] flex flex-col mx-auto shadow-lg p-4 bg-white'>
                 <h1 className="text-2xl font-bold text-center mb-6">Sign up as a Doctor</h1>
-                <div className='grid grid-cols-1 md:grid-cols-2 gap-4  p-4 mx-auto'>
-                    <div>
-                        <img src="" alt="" className='bg-amber-700' />
+                <div className='grid grid-cols-1 md:grid-cols-2 gap-4  p-4 mx-auto place-items-center'>
+                    <div className=''>
+                        <img src={doctor6Image} alt="" className='bg-amber-700' />
                     </div>
                     <Formik initialValues={initialValues} validationSchema={SignupSchema} onSubmit={(values) => {
                         registerDoctor(values);
@@ -174,13 +175,14 @@ function DoctorSignup() {
                                     <ErrorMessage name="agree" component="div" className="text-orange-600 text-sm" />
                                 </div>
                                 <button type="submit" className="text-mylight rounded-lg bg-mygreen py-2 min-w-28 px-4 hover:cursor-pointer hover:bg-mygreen/80" disabled={isSubmitting}>{isSubmitting ? 'Creating...' : 'Create Account'}</button>
+                                <Link to="/login">I already have an account</Link>
                             </Form>
                         )}
                     </Formik>
-                    <Link to="/login">I already have an account</Link>
+                    
                 </div>
             </div>
-            {showDataPolicy && <Modal title="Data Policy" onClose={() => setShowTerms(false)} />}
+            {showDataPolicy && <Modal title="Data Policy" onClose={() => setShowDataPolicy(false)} />}
             {showNDA && <Modal title="Non-Disclosure Agreement" onClose={() => setShowNDA(false)} />}
         </div>
     )
