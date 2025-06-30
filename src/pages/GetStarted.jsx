@@ -3,7 +3,7 @@ import Button from "../components/Button";
 
 function GetStarted() {
     return (
-        <section className='bg-mylight w-full px-4 py-10 md:py-32'>
+        <section className='bg-mylight w-full px-4 py-32'>
             <div className='max-w-[900px] mx-auto text-center grid grid-cols-1 md:grid-cols-2 items-center justify-center shadow-lg'>
                 <div className="bg-white flex flex-col items-center gap-6 py-24 px-4 md:px-20">
                     <h1>Are you in need of medical Service?</h1>
