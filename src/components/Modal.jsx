@@ -13,7 +13,7 @@ function Modal( { onClose, terms, title } ) {
           li: ({ node, ...props }) => <li className="mb-2" {...props} />,
         }}
         >{terms}</ReactMarkdown>
-        <button onClick={onClose} className="mt-4 text-mygreen underline">
+        <button onClick={onClose} className="mt-4 text-mygreen text-semibold underline">
           Close
         </button>
       </div>
