@@ -6,7 +6,7 @@ import doctor4Image from '../assets/images/doctor4.jpg';
 function Doctors() {
     return (
         <section>
-            <div className="max-w-[1300px] mx-auto py-14 flex flex-col gap-12" id="our-doctors">
+            <div className="max-w-[1300px] mx-auto py-14 md:px-3 flex flex-col gap-12" id="our-doctors">
                 <h2 className="text-5xl font-bold text-center font-Rozha">Meet Our Healthcare Professionals</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 border-1 border-mygreen divide-x divide-y divide-mygreen">
                     <div className="bg-mylighty flex flex-col text-center">

@@ -31,7 +31,7 @@ function Testimonials() {
     }
 
     return (
-        <section className='h-[700px] md:h-[90vh] flex items-center relative' style={{ backgroundImage: "url('src/assets/images/doctor.webp')" }}>
+        <section className='h-[700px] md:h-[90vh] flex items-center relative' style={{ backgroundImage:`url(${doctorImage})`}}>
             <div className=''>
                 {reviews.map((review, i) => (
                     <div 
