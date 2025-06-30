@@ -5,7 +5,9 @@ import Modal from '../components/Modal';
 import Button from '../components/Button';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import doctor6Image from '../assets/images/doctor6.jpg'
+import doctor6Image from '../assets/images/doctor6.jpg';
+import { dataPrivacyPolicy } from '../legal/dataPrivacyPolicy';
+import { NDA } from '../legal/NDA';
 
 const SignupSchema = Yup.object({
     fullName: Yup.string().min(2, 'Too short').max(50, 'Too long').required('Please enter your full name'),
@@ -124,7 +126,7 @@ function DoctorSignup() {
                                 </div>
                                 <div>
                                     <label className="font-semibold">Language(s) you speak</label>
-                                    <div className='flex gap-4'>
+                                    <div className='grid grid-cols-2 md:grid-cols-4 gap-4'>
                                         <div>
                                             <label>
                                                 <Field type="checkbox" name="spokenLanguages" value="english" className="accent-mygreen mr-1" />
@@ -133,8 +135,14 @@ function DoctorSignup() {
                                         </div>
                                         <div>
                                             <label>
-                                                <Field type="checkbox" name="spokenLanguages" value="yoruba" className="accent-mygreen mr-1" />
-                                                Yoruba
+                                                <Field type="checkbox" name="spokenLanguages" value="pidgin" className="accent-mygreen mr-1" />
+                                                Pidgin
+                                            </label>
+                                        </div>
+                                        <div>
+                                            <label>
+                                                <Field type="checkbox" name="spokenLanguages" value="edo" className="accent-mygreen mr-1" />
+                                                Edo
                                             </label>
                                         </div>
                                         <div>
@@ -145,10 +153,16 @@ function DoctorSignup() {
                                         </div>
                                         <div>
                                             <label>
-                                                <Field type="checkbox" name="spokenLanguages" value="benin" className="accent-mygreen mr-1" />
-                                                Benin
+                                                <Field type="checkbox" name="spokenLanguages" value="yoruba" className="accent-mygreen mr-1" />
+                                                Yoruba
                                             </label>
                                         </div>
+                                        <div>
+                                            <label>
+                                                <Field type="checkbox" name="spokenLanguages" value="igbo" className="accent-mygreen mr-1" />
+                                                Igbo
+                                            </label>
+                                            </div>
                                     </div>
                                     <ErrorMessage name="spokenLanguages" component="div" className="text-orange-600 text-sm" />
                                 </div>
@@ -182,7 +196,7 @@ function DoctorSignup() {
                     
                 </div>
             </div>
-            {showDataPolicy && <Modal title="Data Policy" onClose={() => setShowDataPolicy(false)} />}
+            {showDataPolicy && <Modal title="Data Policy" terms={dataPrivacyPolicy} onClose={() => setShowDataPolicy(false)} />}
             {showNDA && <Modal title="Non-Disclosure Agreement" onClose={() => setShowNDA(false)} />}
         </div>
     )

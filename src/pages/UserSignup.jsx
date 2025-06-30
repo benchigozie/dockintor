@@ -4,7 +4,8 @@ import { useState } from 'react';
 import Modal from '../components/Modal';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import doctor5Image from '../assets/images/doctor5.jpg'
+import doctor5Image from '../assets/images/doctor5.jpg';
+import { termsOfService } from '../legal/termsContent';
 
 const SignupSchema = Yup.object({
     fullName: Yup.string().min(2, 'Too short').max(50, 'Too long').required('Required'),
@@ -20,6 +21,7 @@ const SignupSchema = Yup.object({
         .oneOf([true], 'You must accept the terms and conditions')
         .required('Required'),
 });
+
 
 const apiBaseUrl = import.meta.env.VITE_API_SERVER_URL;
 
@@ -91,11 +93,23 @@ function UserSignup() {
                                 </div>
                                 <div>
                                     <label className="font-semibold">Your Preferred Language</label>
-                                    <div className='flex gap-4'>
+                                    <div className='grid grid-cols-2 md:grid-cols-4 gap-1'>
                                         <div>
                                             <label>
                                                 <Field type="radio" name="languageChoice" value="english" className="mr-1 accent-mygreen" />
                                                 English
+                                            </label>
+                                        </div>
+                                        <div>
+                                            <label>
+                                                <Field type="radio" name="languageChoice" value="pidgin" className="mr-1 accent-mygreen" />
+                                                Pidgin
+                                            </label>
+                                        </div>
+                                        <div>
+                                            <label>
+                                                <Field type="radio" name="languageChoice" value="edo" className="mr-1 accent-mygreen" />
+                                                Edo
                                             </label>
                                         </div>
                                         <div>
@@ -112,8 +126,8 @@ function UserSignup() {
                                         </div>
                                         <div>
                                             <label>
-                                                <Field type="radio" name="languageChoice" value="benin" className="mr-1 accent-mygreen" />
-                                                Benin
+                                                <Field type="radio" name="languageChoice" value="igbo" className="mr-1 accent-mygreen" />
+                                                Igbo
                                             </label>
                                         </div>
                                     </div>
@@ -134,7 +148,7 @@ function UserSignup() {
                     <Link to="/login">I already have an account</Link>
                 </div>
             </div>
-            {showTerms && <Modal title="Terms and Conditions" onClose={() => setShowTerms(false)} />}
+            {showTerms && <Modal title="Terms and Conditions" terms={termsOfService} onClose={() => setShowTerms(false)} />}
             {showPolicy && <Modal title="Privacy Policy" onClose={() => setShowPolicy(false)} />}
         </div>
     )
